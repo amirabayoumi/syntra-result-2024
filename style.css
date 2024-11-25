@@ -24,7 +24,6 @@
 main {
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 60rem;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
@@ -149,6 +148,45 @@ main {
             var(--CobaltBlue)
           );
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-size: 70%;
+  }
+  body {
+    padding: 3rem;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  main {
+    max-width: 900px;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 3rem;
+    box-shadow: 1rem 1rem 5rem var(--LightLavender);
+    section {
+      &:nth-child(1) {
+        border-radius: 25px;
+        div {
+          width: 57%;
+          h3 {
+            font-size: 6rem;
+          }
+          h4 {
+            font-size: 1.5rem;
+          }
+        }
+        h2 {
+          padding-top: 1rem;
+        }
+      }
+      p {
+        width: 85%;
       }
     }
   }
