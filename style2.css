@@ -1,0 +1,166 @@
+@import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  font-size: 62.5%;
+  font-family: "Hanken Grotesk", sans-serif;
+  --LightSlateBlue: hsl(252, 100%, 67%);
+  --LightRoyalBlue: hsl(241, 81%, 54%);
+  --VioletBlue: hsla(256, 72%, 46%, 1);
+  --PersianBlue: hsla(241, 72%, 46%, 0);
+  --LightLavender: hsl(241, 100%, 89%);
+  --PaleBlue: hsl(221, 100%, 96%);
+  --DarkGrayBlue: hsl(224, 30%, 27%);
+  --LightRed: hsl(0, 100%, 67%);
+  --OrangeyYellow: hsl(39, 100%, 56%);
+  --GreenTeal: hsl(166, 100%, 37%);
+  --CobaltBlue: hsl(234, 85%, 45%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  section:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 100%;
+    background-image: linear-gradient(
+      var(--LightSlateBlue),
+      var(--LightRoyalBlue)
+    );
+    border-radius: 0 0 10% 10%;
+    text-align: center;
+    h1:nth-child(1) {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--LightLavender);
+    }
+    div:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      background-image: linear-gradient(var(--VioletBlue), var(--PersianBlue));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: var(--PaleBlue);
+      }
+      h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--LightLavender);
+      }
+    }
+    div:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      h2 {
+        padding-top: 20px;
+        font-size: 2.2rem;
+        color: var(--PaleBlue);
+        font-weight: 700;
+      }
+      p {
+        font-size: 1.7rem;
+        width: 80%;
+        color: var(--LightLavender);
+      }
+    }
+  }
+
+  section:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px;
+
+    h1 {
+      font-weight: 700;
+      padding-top: 20px;
+      color: var(--DarkGrayBlue);
+      align-self: start;
+      margin-left: 5%;
+    }
+    div {
+      display: grid;
+      grid-template-columns: 0.1fr 2fr 1fr;
+      width: 90%;
+      height: 50px;
+      font-size: 20px;
+      font-weight: normal;
+      padding: 15px;
+      border-radius: 10px;
+      gap: 10px;
+      p {
+        color: hsl(224, 30%, 27%, 0.5);
+        justify-self: end;
+      }
+      em {
+        color: var(--DarkGrayBlue);
+      }
+    }
+    div:nth-child(2) {
+      background-color: hsl(0, 100%, 67%, 0.1);
+      color: var(--LightRed);
+    }
+    div:nth-child(3) {
+      background-color: hsl(39, 100%, 56%, 0.1);
+      color: var(--OrangeyYellow);
+    }
+    div:nth-child(4) {
+      background-color: hsl(166, 100%, 37%, 0.1);
+      color: var(--GreenTeal);
+    }
+    div:nth-child(5) {
+      background-color: hsla(256, 72%, 46%, 0.1);
+      color: var(--VioletBlue);
+    }
+  }
+
+  button {
+    width: 90%;
+    padding: 20px;
+    background-color: var(--DarkGrayBlue);
+    color: var(--PaleBlue);
+    border-radius: 100px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    &:hover {
+      background-image: linear-gradient(var(--VioletBlue), var(--CobaltBlue));
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    margin: 10% 25% 10% 25%;
+    width: 50%;
+    box-shadow: 1px 1px 20px 5px var(--PaleBlue);
+    border-radius: 40px;
+    section:first-of-type {
+      border-radius: 10%;
+    }
+  }
+}
