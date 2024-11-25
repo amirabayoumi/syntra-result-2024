@@ -2,6 +2,6 @@
 
 ## technology
 
- - html
- - css
- - vite
+- html
+- css
+- vite
