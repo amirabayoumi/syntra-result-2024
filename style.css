@@ -1,9 +1,8 @@
 @import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css);
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
 :root {
   font-size: 62.5%;
-  font-family: "Hanken Grotesk", sans-serif;
   --LightSlateBlue: hsl(252, 100%, 67%);
   --LightRoyalBlue: hsl(241, 81%, 54%);
   --VioletBlue: hsla(256, 72%, 46%, 1);
@@ -20,7 +19,13 @@
 * {
   box-sizing: border-box;
 }
-
+body {
+  overflow: hidden;
+  min-height: 100vh;
+}
+canvas {
+  pointer-events: none;
+}
 main {
   display: grid;
   grid-template-columns: 1fr;
@@ -43,6 +48,11 @@ main {
         font-weight: 700;
       }
       div {
+        animation-name: bounceIn;
+        animation-duration: 700ms;
+        animation-delay: 700ms;
+        opacity: 0;
+        animation-fill-mode: forwards;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -63,6 +73,15 @@ main {
           font-size: 3vw;
           color: var(--LightLavender);
         }
+      }
+      h2,
+      p {
+        animation-name: backInDown;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        opacity: 0;
+        animation-fill-mode: forwards;
       }
       h2 {
         font-size: 2.3rem;
